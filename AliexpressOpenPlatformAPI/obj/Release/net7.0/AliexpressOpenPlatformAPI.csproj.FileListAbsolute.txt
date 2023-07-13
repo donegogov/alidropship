@@ -32,3 +32,9 @@ C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\Alie
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\AliexpressOpenPlatformAPI.genruntimeconfig.cache
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\ref\AliexpressOpenPlatformAPI.dll
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\IopSdk.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\DigiCertGlobalRootG2.crt.pem
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\MySqlConnector.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
