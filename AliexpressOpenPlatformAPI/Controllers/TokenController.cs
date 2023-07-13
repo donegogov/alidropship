@@ -29,7 +29,15 @@ namespace AliexpressOpenPlatformAPI.Controllers
             _context = context;
         }
 
-        [Route("ali-dropship-url")]
+        [Route("connection-string")]
+        [HttpGet]
+        public async Task<IActionResult> GetConnectionString()
+        {
+            var connStr = Environment.GetEnvironmentVariable("MYSQLCONNSTR_mysql_nopaliexpressdropshipping_connectionstring");
+            return Ok(connStr);
+        }
+
+            [Route("ali-dropship-url")]
         [HttpGet]
         public async Task<IActionResult> GetAlidropshipURL([FromQuery] string storeUrl)
         {
