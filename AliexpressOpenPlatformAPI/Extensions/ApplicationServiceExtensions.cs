@@ -28,7 +28,7 @@ namespace AliexpressOpenPlatformAPI.Extensions
                 else
                 {
                     // Use connection string provided at runtime by Heroku.
-                    var connUrl = Environment.GetEnvironmentVariable("MYSQLCONNSTR_");
+                    var connUrl = Environment.GetEnvironmentVariable("MYSQLCONNSTR_mysql_nopaliexpressdropshipping_connectionstring");
                 }
 
                 // Whether the connection string came from the local development configuration file
