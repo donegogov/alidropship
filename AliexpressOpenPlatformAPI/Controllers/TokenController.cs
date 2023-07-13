@@ -34,7 +34,8 @@ namespace AliexpressOpenPlatformAPI.Controllers
         public async Task<IActionResult> GetConnectionString()
         {
             var connStr = Environment.GetEnvironmentVariable("MYSQLCONNSTR_mysql_nopaliexpressdropshipping_connectionstring");
-            return Ok(connStr);
+            var directory = AppDomain.CurrentDomain.BaseDirectory;
+            return Ok(connStr + " " + directory);
         }
 
             [Route("ali-dropship-url")]

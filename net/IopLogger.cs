@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Threading;
+using System.Web.Hosting;
 
 namespace Iop.Api
 {
@@ -42,8 +43,8 @@ namespace Iop.Api
         /// </summary>
         private static Queue<Msg> _msgs;
         private bool _state;
-        //private string _logDirectory = AppDomain.CurrentDomain.BaseDirectory;
-        private string _logDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/logs/";
+        private string _logDirectory = HostingEnvironment.ApplicationPhysicalPath;
+        //private string _logDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/logs/";
 
         private bool isDebugEnabled = false;
         /// <summary>
