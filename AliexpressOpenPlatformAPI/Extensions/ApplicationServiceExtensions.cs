@@ -28,12 +28,12 @@ namespace AliexpressOpenPlatformAPI.Extensions
                 else
                 {
                     // Use connection string provided at runtime by Heroku.
-                    var connUrl = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_");
+                    var connUrl = Environment.GetEnvironmentVariable("MYSQLCONNSTR_");
                 }
 
                 // Whether the connection string came from the local development configuration file
                 // or from the environment variable from Heroku, use it to set up your DbContext.
-                options.UseMySql(ServerVersion.AutoDetect(connStr));
+                options.UseMySql(connStr, ServerVersion.AutoDetect(connStr));
             });
 
             return services;
