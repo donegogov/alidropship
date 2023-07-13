@@ -38,3 +38,5 @@ C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Micr
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\MySqlConnector.dll
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Humanizer.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Design.dll

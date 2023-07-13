@@ -57,7 +57,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
             
             return Ok(AuthorizeURL);
         }
-        //https://api-sg.aliexpress.com/oauth/authorize?response_type=code&force_auth=true&redirect_uri=https://alidropship.azurewebsites.net/api/Token/redirect_uri&client_id=33615924&uuid=AliExpressDropshippingCode1212
+        //https://api-sg.aliexpress.com/oauth/authorize?response_type=code&force_auth=true&redirect_uri=https://alidropship.azurewebsites.net/api/Token/redirect_uristoreUrl=google.com&client_id=33615924&uuid=google.com
 
         [Route("redirect-uri")]
         [HttpGet]

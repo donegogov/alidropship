@@ -33,3 +33,11 @@ C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Debug\net7.0\Aliexp
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Debug\net7.0\ref\AliexpressOpenPlatformAPI.dll
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\IopSdk.dll
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\IopSdk.pdb
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\DigiCertGlobalRootG2.crt.pem
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\MySqlConnector.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\Humanizer.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll

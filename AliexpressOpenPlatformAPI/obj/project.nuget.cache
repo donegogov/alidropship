@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "u57CeRpLyhSSPQnlGsIlPwYCoFCtmwPYWg1al9jVWwV91NMisAyuu7e36v9tZbGIaK/Bqz3VLsC3us8Slwec3g==",
+  "dgSpecHash": "B3MOoyO/2Yt8pRdrjVLEdbByk8ynjx/ggVSkZ0kAJIWiW2PjQRlSQvezIn1VJ9mEO1GNj8YJ7/Z2MOFcZPcbow==",
   "success": true,
   "projectFilePath": "C:\\Donatello\\aliexpress plugin\\AliexpressOpenPlatformAPI\\AliexpressOpenPlatformAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\donat\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.8\\microsoft.aspnetcore.openapi.7.0.8.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.20\\microsoft.entityframeworkcore.6.0.20.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.20\\microsoft.entityframeworkcore.abstractions.6.0.20.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.20\\microsoft.entityframeworkcore.analyzers.6.0.20.nupkg.sha512",
-    "C:\\Users\\donat\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.7\\microsoft.entityframeworkcore.relational.6.0.7.nupkg.sha512",
+    "C:\\Users\\donat\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.20\\microsoft.entityframeworkcore.design.6.0.20.nupkg.sha512",
+    "C:\\Users\\donat\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.20\\microsoft.entityframeworkcore.relational.6.0.20.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
