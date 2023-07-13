@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AliexpressOpenPlatformAPI", "AliexpressOpenPlatformAPI\AliexpressOpenPlatformAPI.csproj", "{AF966B26-9090-42E4-8DD3-A8A578CA1298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IopSdk", "net\IopSdk.csproj", "{9C11CAE5-5188-4E71-825B-68FC3135728A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF966B26-9090-42E4-8DD3-A8A578CA1298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF966B26-9090-42E4-8DD3-A8A578CA1298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF966B26-9090-42E4-8DD3-A8A578CA1298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF966B26-9090-42E4-8DD3-A8A578CA1298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78D9A2FD-6C59-4DA6-A9EF-90E5BE248414}
+	EndGlobalSection
+EndGlobal

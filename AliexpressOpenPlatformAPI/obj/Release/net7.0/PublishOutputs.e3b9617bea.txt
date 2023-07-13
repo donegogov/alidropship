@@ -1,0 +1,13 @@
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\AliexpressOpenPlatformAPI.exe
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\appsettings.json
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\AliexpressOpenPlatformAPI.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\AliexpressOpenPlatformAPI.deps.json
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\AliexpressOpenPlatformAPI.runtimeconfig.json
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\AliexpressOpenPlatformAPI.pdb
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\obj\Release\net7.0\PubTmp\Out\IopSdk.dll

@@ -1,0 +1,4 @@
+C:\Donatello\aliexpress plugin\net\bin\Release\IopSdk.dll
+C:\Donatello\aliexpress plugin\net\obj\Release\IopSdk.csproj.AssemblyReference.cache
+C:\Donatello\aliexpress plugin\net\obj\Release\IopSdk.csproj.CoreCompileInputs.cache
+C:\Donatello\aliexpress plugin\net\obj\Release\IopSdk.dll

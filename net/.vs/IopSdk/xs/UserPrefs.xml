@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{1EEB2B97-EEC8-4EA7-9FA1-B2AFA29996F8}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Test/Program.cs">
+    <Files>
+      <File FileName="Test/Program.cs" Line="33" Column="6" />
+      <File FileName="IopRequest.cs" Line="117" Column="10" />
+      <File FileName="IopClient.cs" Line="120" Column="37" />
+      <File FileName="Util/Constants.cs" Line="52" Column="2" />
+      <File FileName="IopLogger.cs" Line="153" Column="22" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="IopSdk" expanded="True">
+            <Node name="IopSdk" expanded="True" />
+            <Node name="IopTest" expanded="True">
+              <Node name="References" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.IopTest PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

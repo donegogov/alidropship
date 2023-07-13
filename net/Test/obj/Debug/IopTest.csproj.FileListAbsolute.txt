@@ -1,0 +1,9 @@
+/Users/joey/java/iopsdk/net/Test/bin/Debug/IopTest.exe.config
+/Users/joey/java/iopsdk/net/Test/bin/Debug/IopTest.exe
+/Users/joey/java/iopsdk/net/Test/bin/Debug/IopTest.pdb
+/Users/joey/java/iopsdk/net/Test/bin/Debug/IopSdk.dll
+/Users/joey/java/iopsdk/net/Test/bin/Debug/IopSdk.pdb
+/Users/joey/java/iopsdk/net/Test/obj/Debug/IopTest.csproj.CoreCompileInputs.cache
+/Users/joey/java/iopsdk/net/Test/obj/Debug/IopTest.csproj.CopyComplete
+/Users/joey/java/iopsdk/net/Test/obj/Debug/IopTest.exe
+/Users/joey/java/iopsdk/net/Test/obj/Debug/IopTest.pdb

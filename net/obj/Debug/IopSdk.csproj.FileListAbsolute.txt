@@ -1,0 +1,12 @@
+/Users/joey/java/iopsdk/net/bin/Debug/IopSdk.dll
+/Users/joey/java/iopsdk/net/bin/Debug/IopSdk.pdb
+/Users/joey/java/iopsdk/net/obj/Debug/IopSdk.csproj.AssemblyReference.cache
+/Users/joey/java/iopsdk/net/obj/Debug/IopSdk.csproj.CoreCompileInputs.cache
+/Users/joey/java/iopsdk/net/obj/Debug/IopSdk.dll
+/Users/joey/java/iopsdk/net/obj/Debug/IopSdk.pdb
+C:\Donatello\aliexpress plugin\net\bin\Debug\IopSdk.dll
+C:\Donatello\aliexpress plugin\net\bin\Debug\IopSdk.pdb
+C:\Donatello\aliexpress plugin\net\obj\Debug\IopSdk.csproj.AssemblyReference.cache
+C:\Donatello\aliexpress plugin\net\obj\Debug\IopSdk.csproj.CoreCompileInputs.cache
+C:\Donatello\aliexpress plugin\net\obj\Debug\IopSdk.dll
+C:\Donatello\aliexpress plugin\net\obj\Debug\IopSdk.pdb
