@@ -40,3 +40,4 @@ C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\MySq
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Humanizer.dll
 C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Donatello\aliexpress plugin\AliexpressOpenPlatformAPI\bin\Release\net7.0\Newtonsoft.Json.dll

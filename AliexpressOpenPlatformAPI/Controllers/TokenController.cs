@@ -1,4 +1,5 @@
 ﻿using AliexpressOpenPlatformAPI.Data;
+using AliexpressOpenPlatformAPI.Entities;
 using AliexpressOpenPlatformAPI.Helpers;
 using Iop.Api;
 using Iop.Api.Util;
@@ -6,6 +7,8 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
@@ -63,8 +66,9 @@ namespace AliexpressOpenPlatformAPI.Controllers
             {
                 return BadRequest("You don't have a valid licence");
             }
-            
-            return Ok(AuthorizeURL);
+            var json = JsonConvert.SerializeObject(new { AuthorizeURL = AuthorizeURL });
+
+            return Ok(json);
         }
         //https://api-sg.aliexpress.com/oauth/authorize?response_type=code&force_auth=true&redirect_uri=https://alidropship.azurewebsites.net/api/Token/redirect_uristoreUrl=google.com&client_id=33615924&uuid=google.com
 
@@ -79,6 +83,26 @@ namespace AliexpressOpenPlatformAPI.Controllers
             request.AddApiParameter("code", code);
             IopResponse response = client.Execute(request, GopProtocolEnum.GOP);
             return Ok(response.IsError() + " " + response.Body + " code = " + code + " response= " + response.ToString());
+        }
+
+        [Route("licence")]
+        [HttpPost]
+        public async Task<IActionResult> AddLicence([FromForm] string websiteUrl)
+        {
+            var store = await _context.AliExpressDropshipUsers.FirstOrDefaultAsync(x => x.StoreURL == websiteUrl);
+
+            if(store == null)
+            {
+                AliExpressDropshipUser aliExpressDropshipUser = new AliExpressDropshipUser();
+                aliExpressDropshipUser.StoreURL = websiteUrl;
+                await _context.AliExpressDropshipUsers.AddAsync(aliExpressDropshipUser);
+                await _context.SaveChangesAsync();
+            }
+            else if(store != null) 
+            {
+                return Ok("This website has a licence");
+            }
+            return Ok("Successfuly added licence to the website " + websiteUrl);
         }
     }
 }

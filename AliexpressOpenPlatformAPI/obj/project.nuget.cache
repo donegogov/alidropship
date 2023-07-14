@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "B3MOoyO/2Yt8pRdrjVLEdbByk8ynjx/ggVSkZ0kAJIWiW2PjQRlSQvezIn1VJ9mEO1GNj8YJ7/Z2MOFcZPcbow==",
+  "dgSpecHash": "I3g3+vGO/sgvqLXB0jka5Prb3BYkG1CK4c6LgACgTsRG9qcEXgzmoW+vl50T4fzXOjfUgaLVisW8M0zwfngCaA==",
   "success": true,
   "projectFilePath": "C:\\Donatello\\aliexpress plugin\\AliexpressOpenPlatformAPI\\AliexpressOpenPlatformAPI.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512",
+    "C:\\Users\\donat\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.2\\pomelo.entityframeworkcore.mysql.6.0.2.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\donat\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
