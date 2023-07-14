@@ -31,7 +31,7 @@ namespace Iop.Api
             this.appSecret = appSecret;
             this.serverUrl = serverUrl;
             this.webUtils = new WebUtils();
-            this.topLogger = Iop.Api.IopLogger.Instance;
+            //this.topLogger = Iop.Api.IopLogger.Instance;
         }
 
         #endregion
