@@ -43,8 +43,8 @@ namespace Iop.Api
         /// </summary>
         private static Queue<Msg> _msgs;
         private bool _state;
-        private string _logDirectory = HostingEnvironment.ApplicationPhysicalPath;
-        //private string _logDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/logs/";
+        //private string _logDirectory = HostingEnvironment.ApplicationPhysicalPath;
+        private string _logDirectory = Path.GetFullPath(Environment.CurrentDirectory) + "/logs/";
 
         private bool isDebugEnabled = false;
         /// <summary>
