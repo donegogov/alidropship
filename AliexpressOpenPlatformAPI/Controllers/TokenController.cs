@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Net;
+using System.Text;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
@@ -24,6 +26,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
         public string AppSecret { get; set; }
         public string AliApiURL { get; set; }
         private readonly DataContext _context;
+        private static readonly HttpClient _client = new HttpClient();
         public TokenController(DataContext context) 
         {
             AppKey = Environment.GetEnvironmentVariable("APP_KEY");
@@ -74,7 +77,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
 
         [Route("redirect-uri")]
         [HttpGet]
-        public IActionResult GetRedirectUri([FromQuery] string code, [FromQuery] string storeUrl)
+        public async Task<IActionResult> GetAuthorizationRedirectUriAsync([FromQuery] string code, [FromQuery] string storeUrl)
         {
             IIopClient client = new IopClient(AliApiURL, AppKey, AppSecret);
             IopRequest request = new IopRequest();
@@ -82,7 +85,22 @@ namespace AliexpressOpenPlatformAPI.Controllers
             request.AddApiParameter("uuid", storeUrl);
             request.AddApiParameter("code", code);
             IopResponse response = client.Execute(request, GopProtocolEnum.GOP);
-            return Ok(response.IsError() + " " + response.Body + " code = " + code + " response= " + response.ToString());
+            if (!response.IsError())
+            {
+                HttpContent httpContent = new StringContent(response.Body, Encoding.UTF8, "application/json");
+                using HttpResponseMessage responseStore = await _client.PostAsync(storeUrl + "api/ApiAliExpressDropshipping/aliexpress-authorization-data", httpContent);
+                if (responseStore.IsSuccessStatusCode)
+                {
+                    return Ok("Authorization successful, now you can close this windows and go back to the store");
+                } else
+                {
+                    return BadRequest(responseStore.Content);
+                }
+            } else
+            {
+                return BadRequest("There was a error somewhere, error msg \"" + response.Message + "\" if you have a licence and again have issues getting authorization please contact admin of this plugin");
+            }
+            //return Ok(response.IsError() + " " + response.Body + " code = " + code + " response= " + response.ToString());
         }
 
         [Route("licence")]
