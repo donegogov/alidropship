@@ -50,7 +50,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
         {
             var store = await _context.AliExpressDropshipUsers.FirstOrDefaultAsync(x => x.StoreURL == storeUrl);
             string AuthorizeURL = "";
-            if (store != null)
+            if (store == null)
             {
                 string serverUrl = "https://api-sg.aliexpress.com/oauth/authorize?";
                 string responseType = "response_type=code";
@@ -65,9 +65,9 @@ namespace AliexpressOpenPlatformAPI.Controllers
                 clientId + "&" +
                 uuId;
             }
-            else if(store == null)
+            else if(store != null)
             {
-                return BadRequest("You don't have a valid licence");
+                return Ok("You have a valid licence");
             }
             var json = JsonConvert.SerializeObject(new { AuthorizeURL = AuthorizeURL });
 
