@@ -2,6 +2,7 @@
 using AliexpressOpenPlatformAPI.Services;
 using Iop.Api;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,8 +23,8 @@ namespace AliexpressOpenPlatformAPI.Controllers
         public IActionResult GetFeedName([FromBody] AliApiDataDto aliApiDataDto)
         {
             IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
-
-            return Ok(response.Body);
+            dynamic json = JsonConvert.DeserializeObject(response.Body);
+            return Ok(json.resp_result.result.promos);
             //return Ok(aliApiDataDto.AccessToken + " " + aliApiDataDto.StoreUrl);
         }
 
