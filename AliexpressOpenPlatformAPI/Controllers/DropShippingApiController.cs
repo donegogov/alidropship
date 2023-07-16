@@ -24,8 +24,8 @@ namespace AliexpressOpenPlatformAPI.Controllers
         public IActionResult GetFeedName([FromBody] AliApiDataDto aliApiDataDto)
         {
             IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
-            dynamic json = JsonSerializer.Deserialize<dynamic>(response.Body);
-            return Ok(json.resp_result.result.promos + " " + response.Body);
+            dynamic json = JsonSerializer.Deserialize<ExpandoObject>(response.Body);
+            return Ok(json + response.Body);
         }
 
         // GET api/<DropShippingApiController>/5
