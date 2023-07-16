@@ -2,6 +2,8 @@
 using AliexpressOpenPlatformAPI.Services;
 using Iop.Api;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,8 +24,9 @@ namespace AliexpressOpenPlatformAPI.Controllers
         public IActionResult GetFeedName([FromBody] AliApiDataDto aliApiDataDto)
         {
             IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
-
-            return Ok(response.Body);
+            JsonNode json = JsonSerializer.Deserialize<JsonNode>(response.Body);
+            var jsonResult = json["resp_result"].GetValue<JsonNode>()["result"].GetValue<JsonNode>()["promos"].GetValue<List<JsonNode>>(); 
+            return Ok(jsonResult);
         }
 
         // GET api/<DropShippingApiController>/5
