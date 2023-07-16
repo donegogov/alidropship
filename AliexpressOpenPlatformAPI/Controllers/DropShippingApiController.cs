@@ -15,7 +15,8 @@ namespace AliexpressOpenPlatformAPI.Controllers
         {
             _dropShippingApiService = dropShippingApiService;
         }
-        // GET: api/<DropShippingApiController>
+
+        [Route("get-feed-name")]
         [HttpPost]
         public IActionResult GetFeed([FromBody] string accessToken)
         {
