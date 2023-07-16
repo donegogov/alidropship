@@ -25,7 +25,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
         {
             IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
             JsonNode json = JsonSerializer.Deserialize<JsonNode>(response.Body);
-            var jsonResult = json["resp_result"].GetValue<JsonNode>()["result"].GetValue<JsonNode>()["promos"].GetValue<List<JsonNode>>(); 
+            var jsonResult = json["resp_result"].GetValue<JsonValue>()["result"].GetValue<JsonValue>()["promos"].GetValue<List<JsonValue>>(); 
             return Ok(jsonResult);
         }
 
