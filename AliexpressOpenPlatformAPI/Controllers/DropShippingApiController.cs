@@ -29,7 +29,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
             IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
             var parsed = JObject.Parse(response.Body);
 
-            return Ok(parsed.SelectToken("resp_result.result.promos").Value<List<JObject>>() + "       " + response.Body);
+            return Ok(parsed.SelectToken("resp_result.result.promos").Value<JArray>() + "       " + response.Body);
         }
 
         // GET api/<DropShippingApiController>/5
