@@ -1,6 +1,7 @@
 ﻿using System;
 using AliexpressOpenPlatformAPI.Data;
 using AliexpressOpenPlatformAPI.Helpers;
+using AliexpressOpenPlatformAPI.Services;
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +13,7 @@ namespace AliexpressOpenPlatformAPI.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
+            services.AddScoped<IDropShippingApiService, DropShippingApiService>();
             services.AddDbContext<DataContext>(options =>
             {
                 var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");

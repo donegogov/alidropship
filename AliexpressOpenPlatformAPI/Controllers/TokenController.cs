@@ -22,16 +22,10 @@ namespace AliexpressOpenPlatformAPI.Controllers
     [ApiController]
     public class TokenController : ControllerBase
     {
-        public string AppKey { get; set; }
-        public string AppSecret { get; set; }
-        public string AliApiURL { get; set; }
         private readonly DataContext _context;
         private static readonly HttpClient _client = new HttpClient();
         public TokenController(DataContext context) 
         {
-            AppKey = Environment.GetEnvironmentVariable("APP_KEY");
-            AppSecret = Environment.GetEnvironmentVariable("APP_SECRET");
-            AliApiURL = Environment.GetEnvironmentVariable("ALI_API_URL");
             _context = context;
         }
 
@@ -56,7 +50,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
                 string responseType = "response_type=code";
                 string forceAuth = "force_auth=true";
                 string redirectUri = "redirect_uri=https://alidropship.azurewebsites.net/api/Token/redirect-uri?storeUrl=" + storeUrl;
-                string clientId = "client_id=" + AppKey;
+                string clientId = "client_id=" + AliExpressDefaults.AppKey;
                 string uuId = "uuid=" + storeUrl;
                 AuthorizeURL = serverUrl +
                 responseType + "&" +
@@ -79,7 +73,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAuthorizationRedirectUriAsync([FromQuery] string code, [FromQuery] string storeUrl)
         {
-            IIopClient client = new IopClient(AliApiURL, AppKey, AppSecret);
+            IIopClient client = new IopClient(AliExpressDefaults.AliApiURL, AliExpressDefaults.AppKey, AliExpressDefaults.AppSecret);
             IopRequest request = new IopRequest();
             request.SetApiName("/auth/token/create");
             request.AddApiParameter("uuid", storeUrl);
