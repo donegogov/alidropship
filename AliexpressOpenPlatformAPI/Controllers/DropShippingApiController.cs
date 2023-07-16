@@ -1,4 +1,5 @@
-﻿using AliexpressOpenPlatformAPI.Services;
+﻿using AliexpressOpenPlatformAPI.Dto;
+using AliexpressOpenPlatformAPI.Services;
 using Iop.Api;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,13 +17,13 @@ namespace AliexpressOpenPlatformAPI.Controllers
             _dropShippingApiService = dropShippingApiService;
         }
 
-        [Route("get-feed-name")]
+        [Route("feed-name")]
         [HttpPost]
-        public IActionResult GetFeed([FromBody] string accessToken)
+        public IActionResult GetFeedName([FromBody] AliApiDataDto aliApiDataDto)
         {
-            IopResponse response = _dropShippingApiService.GetFeedName(accessToken);
+            IopResponse response = _dropShippingApiService.GetFeedName(aliApiDataDto.AccessToken);
 
-            return Ok(response);
+            return Ok(response.Body);
         }
 
         // GET api/<DropShippingApiController>/5
