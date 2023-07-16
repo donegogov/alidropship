@@ -1,9 +1,12 @@
 ﻿using AliexpressOpenPlatformAPI.Dto;
 using AliexpressOpenPlatformAPI.Services;
+using FastJSON;
 using Iop.Api;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using System.Dynamic;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,8 +27,9 @@ namespace AliexpressOpenPlatformAPI.Controllers
         public IActionResult GetFeedName([FromBody] AliApiDataDto aliApiDataDto)
         {
             IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
-            dynamic json = JsonSerializer.Deserialize<ExpandoObject>(response.Body);
-            return Ok(json + response.Body);
+            var parsed = JObject.Parse(response.Body);
+
+            return Ok(parsed.SelectToken("resp_result.result.promos").Value<List<JObject>>() + "       " + response.Body);
         }
 
         // GET api/<DropShippingApiController>/5
