@@ -21,9 +21,10 @@ namespace AliexpressOpenPlatformAPI.Controllers
         [HttpPost]
         public IActionResult GetFeedName([FromBody] AliApiDataDto aliApiDataDto)
         {
-            IopResponse response = _dropShippingApiService.GetFeedName(aliApiDataDto.AccessToken);
+            IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
 
             return Ok(response.Body);
+            //return Ok(aliApiDataDto.AccessToken + " " + aliApiDataDto.StoreUrl);
         }
 
         // GET api/<DropShippingApiController>/5

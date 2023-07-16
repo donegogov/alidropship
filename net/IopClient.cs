@@ -175,14 +175,14 @@ namespace Iop.Api
                 if (response.IsError())
                 {
                     TimeSpan latency = new TimeSpan(DateTime.Now.Ticks - start);
-                    LogApiError(appKey, sdkVersion, request.GetApiName(), serverUrl, sysParams, latency.TotalMilliseconds, response.Body);
+                    //LogApiError(appKey, sdkVersion, request.GetApiName(), serverUrl, sysParams, latency.TotalMilliseconds, response.Body);
                 }
                 else
                 {
                     if (IsDebugEnabled() || IsInfoEnabled())
                     {
                         TimeSpan latency = new TimeSpan(DateTime.Now.Ticks - start);
-                        LogApiError(appKey, sdkVersion, request.GetApiName(), serverUrl, sysParams, latency.TotalMilliseconds, response.Body);
+                        //LogApiError(appKey, sdkVersion, request.GetApiName(), serverUrl, sysParams, latency.TotalMilliseconds, response.Body);
                     }
                 }
 
@@ -191,7 +191,7 @@ namespace Iop.Api
             catch (Exception e)
             {
                 TimeSpan latency = new TimeSpan(DateTime.Now.Ticks - start);
-                LogApiError(appKey, sdkVersion, request.GetApiName(), serverUrl, sysParams, latency.TotalMilliseconds, e.GetType() + ": " + e.Message);
+                //LogApiError(appKey, sdkVersion, request.GetApiName(), serverUrl, sysParams, latency.TotalMilliseconds, e.GetType() + ": " + e.Message);
                 throw e;
             }
         }

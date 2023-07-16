@@ -4,6 +4,6 @@ namespace AliexpressOpenPlatformAPI.Services
 {
     public interface IDropShippingApiService
     {
-        IopResponse GetFeedName(string accessToken);
+        IopResponse ApiGetFeedName(string accessToken);
     }
 }

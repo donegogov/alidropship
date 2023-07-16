@@ -4,7 +4,7 @@ namespace AliexpressOpenPlatformAPI.Services
 {
     public class DropShippingApiService  : IDropShippingApiService
     {
-        public IopResponse GetFeedName(string accessToken)
+        public IopResponse ApiGetFeedName(string accessToken)
         {
             IIopClient client = new IopClient(AliExpressDefaults.AliApiURL, AliExpressDefaults.AppKey, AliExpressDefaults.AppSecret);
             IopRequest request = new IopRequest();
