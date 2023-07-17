@@ -31,13 +31,16 @@ namespace AliexpressOpenPlatformAPI.Controllers
             dynamic promo = JsonConvert.DeserializeObject<ExpandoObject>(response.Body);
 
             return Ok(promo.resp_result.result.promos);
-        }                                                                                                                                                                                                                                                                                                                                                                                                                            
+        }
 
-        // GET api/<DropShippingApiController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [Route("category")]
+        [HttpPost]
+        public IActionResult GetCategory([FromBody] AliApiDataDto aliApiDataDto)
         {
-            return "value";
+            IopResponse response = _dropShippingApiService.ApiGetCategory(aliApiDataDto.AccessToken);
+            dynamic promo = JsonConvert.DeserializeObject<ExpandoObject>(response.Body);
+
+            return Ok(promo.resp_result.result.categories);
         }
 
         // POST api/<DropShippingApiController>
