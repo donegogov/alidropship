@@ -30,7 +30,7 @@ namespace AliexpressOpenPlatformAPI.Controllers
             IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
             dynamic promo = JsonConvert.DeserializeObject(response.Body);
 
-            return Ok(promo.resp_result.result + " " + response.Body);
+            return Ok(promo.resp_result.result.promos);
         }                                                                                                                                                                                                                                                                                                                                                                                                                            
 
         // GET api/<DropShippingApiController>/5
