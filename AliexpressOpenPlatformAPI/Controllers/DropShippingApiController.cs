@@ -3,6 +3,7 @@ using AliexpressOpenPlatformAPI.Services;
 using FastJSON;
 using Iop.Api;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Dynamic;
 using System.Text.Json;
@@ -27,9 +28,9 @@ namespace AliexpressOpenPlatformAPI.Controllers
         public IActionResult GetFeedName([FromBody] AliApiDataDto aliApiDataDto)
         {
             IopResponse response = _dropShippingApiService.ApiGetFeedName(aliApiDataDto.AccessToken);
-            var promo = JObject.Parse(response.Body);
-            var jsonPromo = promo.SelectToken("resp_result.result.promos").Value<JArray>();
-            return Ok(jsonPromo);
+            dynamic promo = JsonConvert.DeserializeObject(response.Body);
+
+            return Ok(promo.resp_result.result.promos);
         }
 
         // GET api/<DropShippingApiController>/5
