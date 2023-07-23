@@ -43,10 +43,22 @@ namespace AliexpressOpenPlatformAPI.Controllers
             return Ok(promo.resp_result.result.categories);
         }
 
-        // POST api/<DropShippingApiController>
+        [Route("products")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult GetProducts([FromBody] string accessToken,
+            string country,
+            string targetCurrency,
+            string targetLanguage,
+            string pageSize,
+            string sort,
+            string pageNumber,
+            string categoryId,
+            string feedName)
         {
+            IopResponse response = _dropShippingApiService.ApiGetAliexpressProducts(accessToken, country, targetCurrency, targetLanguage, pageSize, sort, pageNumber, categoryId, feedName);
+            dynamic products = JsonConvert.DeserializeObject<ExpandoObject>(response.Body);
+
+            return Ok(response.Body);
         }
 
         // PUT api/<DropShippingApiController>/5
