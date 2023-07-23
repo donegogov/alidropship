@@ -10,7 +10,7 @@ namespace AliexpressOpenPlatformAPI.Services
             IopRequest request = new IopRequest();
             request.SetApiName("aliexpress.ds.category.get");
             //request.AddApiParameter("app_signature", "your_signature");
-            IopResponse response = client.Execute(request, accessToken, GopProtocolEnum.GOP);
+            IopResponse response = client.Execute(request, GopProtocolEnum.GOP);
             return response;
         }
 
@@ -20,7 +20,7 @@ namespace AliexpressOpenPlatformAPI.Services
             IopRequest request = new IopRequest();
             request.SetApiName("aliexpress.ds.feedname.get");
             //request.AddApiParameter("app_signature", "your_signature");
-            IopResponse response = client.Execute(request, accessToken, GopProtocolEnum.GOP);
+            IopResponse response = client.Execute(request, GopProtocolEnum.GOP);
             return response;
         }
         public IopResponse ApiGetAliexpressProducts(string accessToken,
@@ -44,7 +44,7 @@ namespace AliexpressOpenPlatformAPI.Services
             request.AddApiParameter("page_no", pageNumber);
             request.AddApiParameter("category_id", categoryId);
             request.AddApiParameter("feed_name", feedName);
-            IopResponse response = client.Execute(request);
+            IopResponse response = client.Execute(request, GopProtocolEnum.GOP);
             
             return response;
         }
