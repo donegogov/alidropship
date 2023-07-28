@@ -45,17 +45,9 @@ namespace AliexpressOpenPlatformAPI.Controllers
 
         [Route("products")]
         [HttpPost]
-        public IActionResult GetProducts([FromBody] string accessToken,
-            string country,
-            string targetCurrency,
-            string targetLanguage,
-            string pageSize,
-            string sort,
-            string pageNumber,
-            string categoryId,
-            string feedName)
+        public IActionResult GetProducts(GetAliexpressProductsDto getAliexpressProductsDto)
         {
-            IopResponse response = _dropShippingApiService.ApiGetAliexpressProducts(accessToken, country, targetCurrency, targetLanguage, pageSize, sort, pageNumber, categoryId, feedName);
+            IopResponse response = _dropShippingApiService.ApiGetAliexpressProducts(getAliexpressProductsDto.AccessToken, getAliexpressProductsDto.Country, getAliexpressProductsDto.TargetCurrency, getAliexpressProductsDto.TargetLanguage, getAliexpressProductsDto.PageSize, getAliexpressProductsDto.Sort, getAliexpressProductsDto.PageNumber, getAliexpressProductsDto.CategoryId, getAliexpressProductsDto.FeedName);
             dynamic products = JsonConvert.DeserializeObject<ExpandoObject>(response.Body);
 
             return Ok(response.Body);
